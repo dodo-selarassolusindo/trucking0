@@ -17,6 +17,8 @@ class Create extends Component
     #[Rule('required', message: 'Masukkan Tanggal Transaksi Perbaikan')]
     public $tanggal;
 
+    public $armada2 = [];
+
     /**
      * store
      *
@@ -25,6 +27,11 @@ class Create extends Component
     public function store()
     {
         $this->validate();
+
+        var_dump($this->armada2);
+
+        var_dump($this->tperbaikands);
+        die();
 
         // create armada
         Tperbaikan::create([

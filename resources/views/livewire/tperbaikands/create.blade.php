@@ -3,6 +3,8 @@
                 Detail Transaksi Perbaikan
             </div> --}}
 
+            <input type="hidden" name="armada2[]" wire:model="armada2.0" value="2">
+
             <div class="card-body">
                 <table class="table" id="tperbaikand_table">
                     <thead>
