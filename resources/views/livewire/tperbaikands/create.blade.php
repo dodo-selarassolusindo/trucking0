@@ -8,16 +8,16 @@
                     <thead>
                     <tr>
                         <th>Armada</th>
-                        <th>Jenis Perbaikan</th>
-                        <th>Jumlah</th>
+                        {{-- <th>Jenis Perbaikan</th> --}}
+                        <th>Nilai</th>
                         <th></th>
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach ($tperbaikandetails as $index => $tperbaikandetail)
+                    @foreach ($tperbaikands as $index => $tperbaikand)
                         <tr>
                             <td>
-                                <select name="tperbaikandetails[{{$index}}][armada]" wire:model="tperbaikandetails.{{$index}}.armada" class="form-control">
+                                <select name="tperbaikands[{{$index}}][armada]" wire:model="tperbaikands.{{$index}}.armada" class="form-control">
                                     <option value="">-- choose Armada --</option>
                                     @foreach ($allArmadas as $armada)
                                         <option value="{{ $armada->id }}">
@@ -38,7 +38,7 @@
                             </td> --}}
                             <td>&nbsp;</td>
                             <td>
-                                <a href="#" wire:click.prevent="removeTperbaikandetail({{$index}})">Delete</a>
+                                <a href="#" wire:click.prevent="removeTperbaikand({{$index}})">Delete</a>
                             </td>
                             {{-- <td>
                                 <input type="number"
@@ -57,7 +57,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <button class="btn btn-sm btn-secondary"
-                            wire:click.prevent="addTperbaikandetail">Add Detail</button>
+                            wire:click.prevent="addTperbaikand">Add Detail</button>
                     </div>
                 </div>
             </div>
