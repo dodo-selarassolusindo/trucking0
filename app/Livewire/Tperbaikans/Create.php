@@ -18,26 +18,26 @@ class Create extends Component
     public $tanggal;
 
     /**
-    * store
-    *
-    * @return void
-    */
-   public function store()
-   {
-       $this->validate();
+     * store
+     *
+     * @return void
+     */
+    public function store()
+    {
+        $this->validate();
 
-       // create armada
-       Tperbaikan::create([
+        // create armada
+        Tperbaikan::create([
            'nomor' => $this->nomor,
            'tanggal' => $this->tanggal,
-       ]);
+        ]);
 
-       //flash message
-       session()->flash('message', 'Data berhasil disimpan');
+        //flash message
+        session()->flash('message', 'Data berhasil disimpan');
 
-       //redirect
-       return redirect()->route('tperbaikans.index');
-   }
+        //redirect
+        return redirect()->route('tperbaikans.index');
+    }
 
     public function render()
     {
