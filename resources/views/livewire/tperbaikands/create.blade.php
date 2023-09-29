@@ -4,7 +4,7 @@
             </div> --}}
 
             <div class="card-body">
-                <table class="table" id="tperbaikandetail_table">
+                <table class="table" id="tperbaikand_table">
                     <thead>
                     <tr>
                         <th>Armada</th>
