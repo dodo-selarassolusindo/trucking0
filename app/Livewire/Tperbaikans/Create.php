@@ -19,6 +19,23 @@ class Create extends Component
 
     public $armada2 = [];
 
+    public $tperbaikands = [];
+
+    /**
+     * mount
+     *
+     * @return void
+     */
+    // public function mount($tperbaikands)
+    public function mount()
+    {
+        // code...
+        // var_dump($this->armada2);
+
+        var_dump($this->tperbaikands);
+        if ($this->tperbaikands) die();
+    }
+
     /**
      * store
      *
@@ -28,10 +45,10 @@ class Create extends Component
     {
         $this->validate();
 
-        var_dump($this->armada2);
-
-        var_dump($this->tperbaikands);
-        die();
+        // var_dump($this->armada2);
+        //
+        // var_dump($this->tperbaikands);
+        // die();
 
         // create armada
         Tperbaikan::create([
